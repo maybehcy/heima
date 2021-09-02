@@ -7,3 +7,15 @@ body,
     margin: 0;
     padding: 0;
 }
+
+
+/* 因为要覆盖默认的样式，所以要把样式写在全局避免权重不够 */
+
+.el-breadcrumb {
+    font-size: 12px;
+}
+
+.el-card {
+    margin-top: 15px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15)!important;
+}

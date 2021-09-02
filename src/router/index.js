@@ -2,12 +2,24 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../components/Login.vue'
 import Home from '../components/Home.vue'
+import Welcome from '../components/Welcome.vue'
+import Users from '../components/user/Users.vue'
 Vue.use(VueRouter)
 
 const routes = [
     { path: '/', redirect: '/login' },
     { path: '/login', component: Login },
-    { path: '/home', component: Home }
+    {
+        path: '/home',
+        component: Home,
+        // 当我们访问/home就会重定向会/welcome
+        redirect: '/welcome',
+        //添加子组件，然后在home.vue对应的位置放置路由占位符
+        children: [
+            { path: '/welcome', component: Welcome },
+            { path: '/users', component: Users }
+        ]
+    }
 
 ]
 
