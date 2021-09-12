@@ -49,7 +49,7 @@
     "rules": {
         "generator-star-spacing": "off",
         "no-tabs": "off",
-        "vue/no-unused-vars": "off",
+        "no-unused-vars": "warn",
         "no-console": "off",
         "no-irregular-whitespace": "off",
         "no-debugger": "off"
